@@ -20,5 +20,7 @@ Output: Increasing order of sequence of inverse tuples `(rating, movieId)`
 
 ## Run with Hadoop Streaming App/YARN on Azure HDInsight Cluster
 Steps to follow: https://github.com/MicrosoftDocs/azure-docs/blob/981f98cd0fd7ac267142f3d43836cbc275805f5e/articles/hdinsight/hdinsight-hadoop-streaming-python.md
+
 Stage1: `STAGEID=1 yarn hadoop-streaming.jar -files mapper_stage$STAGEID.py,reducer_stage$STAGEID.py -mapper mapper_stage$STAGEID.py -reducer reducer_stage$STAGEID.py -input data/ratings.csv -output data/avg_rating`
+
 Stage2: `STAGEID=2 yarn hadoop-streaming.jar -files mapper_stage$STAGEID.py,reducer_stage$STAGEID.py -mapper mapper_stage$STAGEID.py -reducer reducer_stage$STAGEID.py -input data/avg_rating -output data/sort_rating`
