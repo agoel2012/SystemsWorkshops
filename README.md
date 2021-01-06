@@ -1,8 +1,8 @@
 # SystemsWorkshops
 Workshops for Cloud Systems Coursework
 
-# Workshop 1
-## Build a 2 stage data-pipeline that imports MovieLens rating dataset to produce list of worst rated movies of all time
+# Workshop 1: Rate Movies "Worst to Best"
+Build a 2 stage data-pipeline that imports MovieLens rating dataset to produce list of worst rated movies of all time
 ### Pre-requisite
 Download MovieLens DataSet `ml-latest-small.zip` from `https://grouplens.org/datasets/movielens`
 ```
